@@ -1,0 +1,144 @@
+/* Google Font - Red Hat Display */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+/* Variables */
+:root {
+  /* Colors */
+  --colors-rackley: #4d96a9;
+  --colors-aero: #71c0d4;
+  --colors-purple: #855fb1;
+  --colors-lenurple: #b18bdd;
+  --colors-yankees-blue: #28283d;
+  --colors-silver: #87879d;
+  --colors-cyan: #8fe3f9;
+  --colors-mauve: #d9b8ff;
+  --colors-lotion: #fafafa;
+  /* Fonts */
+  --fonts-main: "Red Hat Display", sans-serif;
+}
+/* Global Rules  */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--colors-lotion);
+  color: var(--colors-silver);
+  font-family: var(--fonts-main);
+  cursor: default;
+}
+
+/* Typography */
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+}
+h2 {
+  font-size: 2.5rem;
+  list-style: 1.125;
+}
+h1,
+h2 {
+  color: var(--colors-yankees-blue);
+}
+p {
+  font-size: 1.125rem;
+  list-style: 1.444;
+}
+.overline {
+  font-weight: 900;
+  line-height: 1.625;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--colors-rackley);
+}
+
+/* Reset Some Elements */
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+button {
+  color: inherit;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Buttons & Links */
+.btn {
+  color: white;
+  font-weight: 900;
+  padding: 16px 29px;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+}
+.btn .version {
+  margin-left: 4px;
+}
+.rackley {
+  background-color: var(--colors-rackley);
+}
+.rackley .version {
+  color: var(--colors-cyan);
+}
+.rackley:hover {
+  background-color: var(--colors-aero);
+}
+.purple {
+  background-color: var(--colors-purple);
+}
+.purple .version {
+  color: var(--colors-mauve);
+}
+.purple:hover {
+  background-color: var(--colors-lenurple);
+}
+
+/* Container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 374px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (min-width: 374px) {
+  .container {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 696px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1110px;
+  }
+}
+
