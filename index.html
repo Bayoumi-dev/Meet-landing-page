@@ -2,24 +2,90 @@
 <html lang="en">
 
 <head>
-    <!-- specifies the character encoding for the HTML document -->
-    <meta charset="UTF-8">
-    <!-- Displays site properly based on user's device -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Provides a brief summary of a web page -->
-    <meta name="description" content="This is a solution to the Meet landing page challenge on Frontend Mentor. 
+   <!-- specifies the character encoding for the HTML document -->
+   <meta charset="UTF-8">
+   <!-- Displays site properly based on user's device -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Provides a brief summary of a web page -->
+   <meta name="description" content="This is a solution to the Meet landing page challenge on Frontend Mentor. 
         The purpose of this challenge is to improve my coding skills by building realistic projects.">
-    <!-- Favicon -->
-    <link rel="icon" type="image/ico" sizes="32x32" href="assets/favicon.ico">
-    <!-- CSS File  -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Meet landing page | Frontend Mentor</title>
+   <!-- Favicon -->
+   <link rel="icon" type="image/ico" sizes="32x32" href="assets/favicon.ico">
+   <!-- CSS File  -->
+   <link rel="stylesheet" href="css/style.css">
+   <title>Meet landing page | Frontend Mentor</title>
 </head>
 
 <body>
-    <main>
+   <!-- Header -->
+   <header class="header">
+      <div class="header__container container">
+         <a href="#" class="header__logo">
+            <img src="assets/logo.svg" alt="Meet's logo">
+         </a>
+      </div>
+   </header>
 
-    </main>
+   <main>
+      <!-- Hero Section -->
+      <section class="hero">
+         <div class="hero__container container">
+            <h1>Group Chat for Everyone</h1>
+            <p>Meet makes it easy to connect with others face-to-face
+               virtually and collaborate across any device.</p>
+            <div class="hero__btns">
+               <button class="hero__btn-download btn rackley">
+                  Download
+                  <span class="version">v1.3</span>
+               </button>
+               <a href="#" class="hero__btn-what btn purple">What is it?</a>
+            </div>
+         </div>
+      </section>
+
+      <!-- Details Section -->
+      <section class="details">
+         <div class="details__container container">
+            <ul class="details__imgs-features">
+               <!-- Meet's Features -->
+               <li class="details__img-wrapper">
+                  <img src="assets/desktop/image-woman-in-videocall.jpg" alt="video call">
+               </li>
+               <li class="details__img-wrapper">
+                  <img src="assets/desktop/image-women-videochatting.jpg" alt="video chatting">
+               </li>
+               <li class="details__img-wrapper">
+                  <img src="assets/desktop/image-men-in-meeting.jpg" alt="meeting">
+               </li>
+               <li class="details__img-wrapper">
+                  <img src="assets/desktop/image-man-texting.jpg" alt="texting">
+               </li>
+            </ul>
+
+            <div class="details__text">
+               <h2>
+                  <span class="overline">Built for modern use</span>
+                  Smarter meetings, all in one place
+               </h2>
+               <p>Send messages, share files, show your screen, and record your meetings — all in one
+                  workspace.
+                  Control who can join with invite-only team access, data encryption, and data export.</p>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- Footer (Experience Section) -->
+   <footer class="footer">
+      <div class="footer__container container">
+         <h2>Experience more together</h2>
+         <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+         <button class="footer__btn-download btn purple">
+            Download
+            <span class="version">v1.3</span>
+         </button>
+      </div>
+   </footer>
 </body>
 
 </html>
