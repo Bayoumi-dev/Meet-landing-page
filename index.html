@@ -87,6 +87,22 @@
          </button>
       </div>
    </footer>
+
+   <script>
+      // No actions (status)
+      const status = _ => {
+         !document.body.querySelectorAll('.status').length && (
+            document.body.insertAdjacentHTML(
+               "beforeend",
+               `<div role="status" class="status">No Actions... This is a preview</div>`
+            ), setTimeout(_ => {
+               document.body.querySelector('.status').remove()
+            }, 3300)
+         )
+      }
+      document.body.querySelectorAll('.btn')
+         .forEach(btn => btn.addEventListener('click', status))
+   </script>
 </body>
 
 </html>

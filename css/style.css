@@ -399,7 +399,7 @@ main {
   -o-transition: 0.5s;
 }
 .details__img-wrapper:hover img {
-  transform:scale(1.07);
+  transform: scale(1.07);
 }
 .details__img-wrapper::before {
   content: ""; /*Flashingeffect*/
@@ -513,5 +513,74 @@ main {
 @media (max-width: 375px) {
   .footer__container p {
     margin: 24px 0 32px;
+  }
+}
+
+/* No actions (status) */
+.status,
+.status::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status {
+  position: fixed;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  padding: 12px 18px;
+  background-color: rgb(237, 44, 73);
+  color: white;
+  min-width: 270px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  z-index: 1000;
+  animation: showStatus 0.3s ease-in forwards,
+    hideStatus 0.3s 3s ease-in-out forwards;
+  -webkit-animation: showStatus 0.3s ease-in forwards,
+    hideStatus 0.3s 3s ease-in-out forwards;
+}
+.status::before {
+  content: "!";
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background-color: white;
+  color: rgb(237, 44, 73);
+  border-radius: 50%;
+}
+@keyframes showStatus {
+  to {
+    top: 20px;
+    transform: translateX(-50%) scale(1);
+  }
+}
+@keyframes hideStatus {
+  to {
+    top: -50px;
+    transform: translateX(-50%) scale(0.5);
+  }
+}
+@media (min-width: 992px) {
+  /* View status on desktops in a different way */
+  .status { 
+    font-size: 16px;
+    top: initial;
+    left: initial;
+    bottom: 20px;
+    left: -200px;
+    transform: none;
+  }
+  @keyframes showStatus {
+    to {
+      left: 20px;
+    }
+  }
+  @keyframes hideStatus {
+    to {
+      bottom: -50px;
+    }
   }
 }
