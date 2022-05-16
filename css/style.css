@@ -272,6 +272,10 @@ main {
   left: 50%;
   z-index: -1;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 .hero__img::before {
   content: "";
@@ -324,6 +328,10 @@ main {
     background-size: contain;
     transform: translateX(0);
     padding-top: 44%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   .hero__img::before {
     background: none;
@@ -378,11 +386,52 @@ main {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   overflow: hidden;
+  position: relative;
 }
 .details__img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.details__img-wrapper:hover img {
+  transform:scale(1.07);
+}
+.details__img-wrapper::before {
+  content: ""; /*Flashingeffect*/
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 10;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.details__img-wrapper:hover::before {
+  animation: flashing 0.75s;
+  -webkit-animation: flashing 0.75s;
+}
+@keyframes flashing {
+  0%,
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
 }
 .details__text h2 {
   max-width: 445px;
