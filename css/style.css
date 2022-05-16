@@ -98,6 +98,7 @@ button {
 /* Buttons & Links */
 .btn {
   color: white;
+  font-size: 1rem;
   font-weight: 900;
   width: 193px;
   height: 58px;
@@ -265,7 +266,7 @@ main {
   position: relative;
 }
 .hero__img {
-  width: 134%;
+  width: 135%;
   height: 100%;
   position: absolute;
   top: 0;
